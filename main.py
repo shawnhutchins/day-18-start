@@ -1,32 +1,20 @@
 from turtle import Turtle, Screen
-from random import randint
+import random
 
 timmy = Turtle()
-timmy.shape("turtle")
-timmy.color("red")
-
 screen = Screen()
-screen.colormode(255)
 
-sides = 3
-max_sides = 10
-side_len = 100
+#make a list of colors to chose from
+#make a variable to control line width
+#make a variable to control line length
+#make a variable to control line color
+#make a variable to control number or iterations
 
-def new_random_color():
-    r = randint(0, 255)
-    g = randint(0, 255)
-    b = randint(0, 255)
-    new_color = [r, g, b]
-    return new_color
-
-line_color = new_random_color()
-
-while sides != max_sides:
-    timmy.color((line_color[0], line_color[1], line_color[2]))
-    for _ in range(sides):
-        timmy.forward(100)
-        timmy.right(360/sides)
-    sides += 1
-    line_color = new_random_color()
+#figure out how to control turtle speed
+#make a function to randomly pick an int from -1 to 1
+#make variables for x and y axis
+#randomly pick x or y axis
+    #randomly pick 1 or -1
+#make the loop to paint the lines for number of iterations
 
 screen.exitonclick()
