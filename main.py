@@ -1,18 +1,25 @@
-from turtle import Turtle, Screen
+import turtle as t
 import random
 
-timmy = Turtle()
+timmy = t.Turtle()
 timmy.speed(10)
 timmy.width(10)
 line_length = 25
 
-colors = ["red", "purple3", "LimeGreen", "DeepSkyBlue2", "gold1", "tan3"]
+t.colormode(255)
+
 directions = [0, 90, 180, 270]
 
+def new_random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    return (r, g, b)
+
 for _ in range(200):
-    timmy.color(random.choice(colors))
+    timmy.color(new_random_color())
     timmy.setheading(random.choice(directions))
     timmy.forward(line_length)
 
-screen = Screen()
+screen = t.Screen()
 screen.exitonclick()
