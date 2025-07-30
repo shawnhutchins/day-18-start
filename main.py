@@ -7,9 +7,12 @@ timmy = t.Turtle()
 
 colors = colorgram.extract("image.jpg", 20)
 t_colors = []
-pprint.pp(colors[0].rgb.r)
+
 for index in range(len(colors)):
-    colors[index].rgb.r
+    r = colors[index].rgb.r
+    g = colors[index].rgb.g
+    b = colors[index].rgb.b
+    t_colors.append((r, g, b))
 
 screen = t.Screen()
 screen.exitonclick()
