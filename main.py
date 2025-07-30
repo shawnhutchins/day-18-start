@@ -1,24 +1,15 @@
 import turtle as t
-import random
-
-timmy = t.Turtle()
-timmy.speed(0)
+import colorgram
+import pprint
 
 t.colormode(255)
+timmy = t.Turtle()
 
-def new_random_color():
-    r = random.randint(0, 255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    return (r, g, b)
-
-def draw_spirograph(size_of_gap):
-    for _ in range(int(360 / size_of_gap)):
-        timmy.color(new_random_color())
-        timmy.circle(100)
-        timmy.right(size_of_gap)
-
-draw_spirograph(10)
+colors = colorgram.extract("image.jpg", 20)
+t_colors = []
+pprint.pp(colors[0].rgb.r)
+for index in range(len(colors)):
+    colors[index].rgb.r
 
 screen = t.Screen()
 screen.exitonclick()
